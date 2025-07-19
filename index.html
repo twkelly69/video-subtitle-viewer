@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影片字幕同步檢視器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>影片字幕同步檢視器</h1>
+            <div class="upload-section">
+                <div class="upload-group">
+                    <label for="videoFile">選擇MP4影片檔案:</label>
+                    <input type="file" id="videoFile" accept=".mp4" />
+                </div>
+                <div class="upload-group">
+                    <label for="srtFile">選擇SRT字幕檔案:</label>
+                    <input type="file" id="srtFile" accept=".srt" />
+                </div>
+                <button id="processBtn" disabled>開始處理</button>
+            </div>
+        </header>
+        
+        <div class="progress-section" id="progressSection" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">處理中...</div>
+        </div>
+
+        <main class="main-content" id="mainContent" style="display: none;">
+            <div class="left-panel">
+                <h2>影片截圖 (每30秒)</h2>
+                <div class="frames-container" id="framesContainer">
+                    <!-- 動態生成的影片截圖 -->
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <h2>對應字幕</h2>
+                <div class="subtitles-container" id="subtitlesContainer">
+                    <!-- 動態生成的字幕內容 -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

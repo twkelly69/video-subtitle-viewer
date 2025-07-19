@@ -1,0 +1,30 @@
+# 大型影片檔案
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# 字幕檔案 (如果包含敏感內容)
+# *.srt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 暫存檔案
+.DS_Store
+Thumbs.db
+
+# 編輯器檔案
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日誌檔案
+*.log
+
+# 依賴套件
+node_modules/
