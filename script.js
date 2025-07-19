@@ -242,7 +242,7 @@ class VideoSubtitleProcessor {
             
             if (subtitle) {
                 subtitleElement.innerHTML = `
-                    <div class="subtitle-timestamp">${this.formatTime(frame.timestamp)} (字幕: ${this.formatTime(subtitle.startTime)} - ${this.formatTime(subtitle.endTime)})</div>
+                    <div class="subtitle-timestamp">${this.formatTime(frame.timestamp)}</div>
                     <div class="subtitle-text">${subtitle.text}</div>
                 `;
             } else {
